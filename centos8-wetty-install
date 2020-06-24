@@ -8,4 +8,4 @@ systemctl enable wetty.service
 systemctl start wetty.service
 systemctl status wetty.service
 
-# ip:4200 chrom 브라우저로 접속
+# ip:4200 chrome 브라우저로 접속
