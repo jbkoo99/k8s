@@ -7,6 +7,11 @@ yum -y update
 npm install -g yarn
 yarn global add wetty
 
+systemctl start firewalld
+firewall-cmd --permanent --zone=public --add-port=4200/tcp
+firewall-cmd --reload
+firewall-cmd --list-ports
+
 systemctl enable wetty.service
 systemctl start wetty.service
 systemctl status wetty.service
