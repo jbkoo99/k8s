@@ -1,0 +1,19 @@
+yum -y install epel-release
+
+yum -y install xrdp tigervnc-server
+
+yum -y update
+
+systemctl start firewalld
+
+firewall-cmd --permanent --zone=public --add-port=3389/tcp
+
+firewall-cmd --reload
+
+firewall-cmd --list-ports
+
+systemctl enable xrdp.service
+
+systemctl start xrdp.service
+
+systemctl status xrdp.service
