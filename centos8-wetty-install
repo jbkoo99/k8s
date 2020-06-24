@@ -1,4 +1,4 @@
-yum -y install nodejs npm
+yum -y install nodejs npm make
 yum -y install python python2 python36 python38  
 yum -y install gcc-c++
 npm install -g yarn
