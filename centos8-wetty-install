@@ -1,6 +1,9 @@
+## https://github.com/butlerx/wetty
+
 yum -y install nodejs npm make
 yum -y install python python2 python36 python38  
 yum -y install gcc-c++
+yum -y update
 npm install -g yarn
 yarn global add wetty
 
