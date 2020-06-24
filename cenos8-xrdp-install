@@ -1,19 +1,14 @@
 yum -y install epel-release
-
 yum -y install xrdp tigervnc-server
-
 yum -y update
 
 systemctl start firewalld
-
 firewall-cmd --permanent --zone=public --add-port=3389/tcp
-
 firewall-cmd --reload
-
 firewall-cmd --list-ports
 
 systemctl enable xrdp.service
-
 systemctl start xrdp.service
-
 systemctl status xrdp.service
+
+# mstsc/admin, 디스플레이 색 투루 컬러(24비트) 로 접속 
