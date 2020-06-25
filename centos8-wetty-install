@@ -12,6 +12,24 @@ firewall-cmd --permanent --zone=public --add-port=4200/tcp
 firewall-cmd --reload
 firewall-cmd --list-ports
 
+######### /lib/systemd/system/wetty.service  파일 생성 ############
+[root@localhost system]# cat wetty.service 
+[Unit]
+Description=wetty service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/local/bin/wetty -p 4200 --base=/
+
+[Install]
+WantedBy=multi-user.target
+#####################################################################
+
 systemctl enable wetty.service
 systemctl start wetty.service
 systemctl status wetty.service
