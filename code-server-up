@@ -1,0 +1,7 @@
+sudo curl https://github.com/jbkoo99/k8s/blob/master/codeserver.service -o /lib/systemd/system/codeserver.service
+
+PASSWORD=Kcci@123 nohup code-server -p 8080 --allow-http
+
+firewall-cmd --permanent --zone=public --add-port=8080/tcp
+
+firewall-cmd --reload
