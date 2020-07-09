@@ -1,0 +1,18 @@
+[Unit]
+Description=Code Server IDE
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Environment="PASSWORD=Kcci@123"
+Restart=on-failure
+RestartSec=10
+
+ExecStart=/usr/local/bin/code-server --port 8000 /root/project
+
+StandardOutput=file:/var/log/code-server-output.log
+StandardError=file:/var/log/code-server-error.log
+
+[Install]
+WantedBy=multi-user.target
