@@ -5,3 +5,7 @@ PASSWORD=Kcci@123 nohup code-server -p 8080 --allow-http
 firewall-cmd --permanent --zone=public --add-port=8080/tcp
 
 firewall-cmd --reload
+
+PASSWORD=Kcci@123 nohup code-server -p 8080 --allow-http &
+
+http://ip:8080
