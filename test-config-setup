@@ -24,6 +24,22 @@ sudo dnf install docker-ce --nobest -y
 
 yum install -y docker-ce-cli-1:19.03.8-3.el7
 
+
+
+https://yallalabs.com/devops/how-to-install-docker-compose-centos-8/
+
+
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+$ sudo chmod +x /usr/local/bin/docker-compose
+
+$ sudo docker-compose --version
+docker-compose version 1.25.4, build 4667896b
+
+
+
+
+
 curl -sfL https://get.k3s.io | sh -
 kubectl get nodes
 cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
